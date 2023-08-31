@@ -1,0 +1,12 @@
+[workspace]
+    members = ["problems/*"]
+
+    resolver = "2"
+
+    [workspace.package]
+        authors      = ["Jade Lynn Masker <donottellmetonottellyou@gmail.com>"]
+        edition      = "2021"
+        rust-version = "1.58.1"
+
+    [workspace.dependencies]
+        rand = "0.6.*"

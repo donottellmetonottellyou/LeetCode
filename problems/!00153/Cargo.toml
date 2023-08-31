@@ -1,0 +1,10 @@
+[package]
+    name    = "find-minimum-in-rotated-sorted-array"
+    version = "0.1.0"
+
+    authors.workspace = true
+
+    edition.workspace      = true
+    rust-version.workspace = true
+
+[dependencies]
