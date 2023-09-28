@@ -11,3 +11,5 @@
 
     [workspace.dependencies]
         rand = "0.6.*"
+
+        utilities = { path = "./utilities" }
