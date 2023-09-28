@@ -1,5 +1,5 @@
 [workspace]
-    members = ["finished/*", "problems/*"]
+    members = ["finished/*", "problems/*", "utilities"]
 
     resolver = "2"
 
