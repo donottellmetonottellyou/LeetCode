@@ -10,7 +10,8 @@ impl Solution {
             (_, b'?') => 4,
             (_, _) => 1,
         };
-        let minute_combinations = match (time.as_bytes()[3], time.as_bytes()[4]) {
+        let minute_combinations = match (time.as_bytes()[3], time.as_bytes()[4])
+        {
             (b'?', b'?') => 60,
             (b'?', _) => 6,
             (_, b'?') => 10,

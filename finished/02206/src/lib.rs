@@ -8,7 +8,9 @@ impl Solution {
 
         let mut not_paired = Vec::new();
         for num in nums {
-            if let Some(unpaired_at) = not_paired.iter().position(|unpaired| *unpaired == num) {
+            if let Some(unpaired_at) =
+                not_paired.iter().position(|unpaired| *unpaired == num)
+            {
                 not_paired.remove(unpaired_at);
             } else {
                 not_paired.push(num);
@@ -33,8 +35,8 @@ mod tests {
     #[test]
     fn finds_array_divisible_2() {
         let nums = vec![
-            9, 4, 18, 3, 2, 6, 18, 15, 7, 15, 6, 4, 15, 14, 7, 4, 15, 4, 3, 17, 9, 13, 13, 12, 2,
-            14, 12, 17,
+            9, 4, 18, 3, 2, 6, 18, 15, 7, 15, 6, 4, 15, 14, 7, 4, 15, 4, 3, 17,
+            9, 13, 13, 12, 2, 14, 12, 17,
         ];
 
         assert!(Solution::divide_array(nums));

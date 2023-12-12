@@ -75,8 +75,10 @@ mod tests {
 
     #[test]
     fn sets_zeroes_2() {
-        let mut matrix = vec![vec![0, 1, 2, 0], vec![3, 4, 5, 2], vec![1, 3, 1, 5]];
-        let solution = vec![vec![0, 0, 0, 0], vec![0, 4, 5, 0], vec![0, 3, 1, 0]];
+        let mut matrix =
+            vec![vec![0, 1, 2, 0], vec![3, 4, 5, 2], vec![1, 3, 1, 5]];
+        let solution =
+            vec![vec![0, 0, 0, 0], vec![0, 4, 5, 0], vec![0, 3, 1, 0]];
 
         Solution::set_zeroes(&mut matrix);
 

@@ -7,7 +7,9 @@ impl Solution {
         queries
             .into_iter()
             .map(|query| (query[0] as usize, query[1] as usize + 1))
-            .map(|(left_bits, right_bits)| prefix_sums[left_bits] ^ prefix_sums[right_bits])
+            .map(|(left_bits, right_bits)| {
+                prefix_sums[left_bits] ^ prefix_sums[right_bits]
+            })
             .collect()
     }
 

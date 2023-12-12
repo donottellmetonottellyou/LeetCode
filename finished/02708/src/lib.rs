@@ -4,9 +4,13 @@ impl Solution {
     pub fn max_strength(nums: Vec<i32>) -> i64 {
         //  We filter out the zeros and check to see if there are any non-zero elements, or else we
         //  can only create a strength of 0.
-        let non_zero = nums
-            .iter()
-            .filter_map(|num| if *num == 0 { None } else { Some(*num as i64) });
+        let non_zero = nums.iter().filter_map(|num| {
+            if *num == 0 {
+                None
+            } else {
+                Some(*num as i64)
+            }
+        });
         let mut safety_check = non_zero.clone();
         match safety_check.next() {
             Some(num) if num.is_negative() && safety_check.next().is_none() => {
@@ -19,8 +23,8 @@ impl Solution {
                     //  number.
                     return num;
                 }
-            }
-            Some(_) => {}
+            },
+            Some(_) => {},
             None => return 0,
         }
 

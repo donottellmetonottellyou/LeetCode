@@ -27,7 +27,7 @@ impl Solution {
                     // ...or else it wasn't monotonic.
                     Some(true) => return false,
                 },
-                Equal => {}
+                Equal => {},
             }
             true
         })

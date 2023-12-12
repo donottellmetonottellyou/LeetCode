@@ -26,11 +26,7 @@ pub struct TreeNode {
 impl TreeNode {
     #[inline]
     pub fn new(val: i32) -> Self {
-        Self {
-            val,
-            left: None,
-            right: None,
-        }
+        Self { val, left: None, right: None }
     }
 
     #[inline]
@@ -38,7 +34,10 @@ impl TreeNode {
         Self::try_make_child_from(slice, 0)
     }
 
-    fn try_make_child_from(slice: &[Option<i32>], i: usize) -> Option<Rc<RefCell<Self>>> {
+    fn try_make_child_from(
+        slice: &[Option<i32>],
+        i: usize,
+    ) -> Option<Rc<RefCell<Self>>> {
         Some(Rc::new(RefCell::new(Self {
             val: *slice.get(i).as_ref()?.as_ref()?,
             left: Self::try_make_child_from(slice, i * 2 + 1),

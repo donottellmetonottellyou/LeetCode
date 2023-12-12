@@ -4,7 +4,8 @@ use std::{cmp::Reverse, collections::BinaryHeap, iter::FromIterator};
 
 impl Solution {
     pub fn kth_smallest(matrix: Vec<Vec<i32>>, k: i32) -> i32 {
-        let mut heap = BinaryHeap::from_iter(matrix.into_iter().flatten().map(Reverse));
+        let mut heap =
+            BinaryHeap::from_iter(matrix.into_iter().flatten().map(Reverse));
 
         for _ in 1..k {
             heap.pop();

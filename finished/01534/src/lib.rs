@@ -10,7 +10,9 @@ impl Solution {
                     continue;
                 }
                 for k in (j + 1)..arr.len() {
-                    if (arr[j] - arr[k]).abs() <= b && (arr[i] - arr[k]).abs() <= c {
+                    if (arr[j] - arr[k]).abs() <= b
+                        && (arr[i] - arr[k]).abs() <= c
+                    {
                         count += 1;
                     }
                 }

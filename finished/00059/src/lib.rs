@@ -24,7 +24,7 @@ impl Solution {
                         direction = Direction::Down;
                         x += 1;
                     }
-                }
+                },
                 Direction::Down => {
                     if x + 1 < n as usize && matrix[x + 1][y] == 0 {
                         x += 1;
@@ -32,7 +32,7 @@ impl Solution {
                         direction = Direction::Left;
                         y -= 1;
                     }
-                }
+                },
                 Direction::Left => {
                     if y > 0 && matrix[x][y - 1] == 0 {
                         y -= 1;
@@ -40,7 +40,7 @@ impl Solution {
                         direction = Direction::Up;
                         x -= 1;
                     }
-                }
+                },
                 Direction::Up => {
                     if x > 0 && matrix[x - 1][y] == 0 {
                         x -= 1;
@@ -48,7 +48,7 @@ impl Solution {
                         direction = Direction::Right;
                         y += 1;
                     }
-                }
+                },
             }
         }
 

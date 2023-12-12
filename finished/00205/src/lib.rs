@@ -11,9 +11,7 @@ impl Solution {
         let t = Self::map_bytes(&t);
 
         // map_bytes() will ensure that if s and t are isomorphic, the patterns will be the same.
-        s.into_iter()
-            .zip(t)
-            .all(|(s_byte, t_byte)| s_byte == t_byte)
+        s.into_iter().zip(t).all(|(s_byte, t_byte)| s_byte == t_byte)
     }
 
     fn map_bytes(s: &str) -> Vec<u8> {

@@ -30,7 +30,8 @@ impl Iterator for Direction {
 impl Solution {
     pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {
         //  Make the matrix into VecDeque's so we can access pop_front().
-        let mut matrix: VecDeque<_> = matrix.into_iter().map(VecDeque::from).collect();
+        let mut matrix: VecDeque<_> =
+            matrix.into_iter().map(VecDeque::from).collect();
         let mut spiral = Vec::with_capacity(matrix.len() * matrix[0].len());
 
         for direction in Direction::Right.into_iter() {
@@ -46,9 +47,11 @@ impl Solution {
                             None => break,
                         }
                     }
-                }
+                },
                 Direction::Left => match matrix.pop_back() {
-                    Some(bottom) => spiral.append(&mut bottom.into_iter().rev().collect()),
+                    Some(bottom) => {
+                        spiral.append(&mut bottom.into_iter().rev().collect())
+                    },
                     None => break,
                 },
                 Direction::Up => {
@@ -58,7 +61,7 @@ impl Solution {
                             None => break,
                         }
                     }
-                }
+                },
             }
         }
 
@@ -80,7 +83,8 @@ mod tests {
 
     #[test]
     fn spirals_2() {
-        let matrix = vec![vec![1, 2, 3, 4], vec![5, 6, 7, 8], vec![9, 10, 11, 12]];
+        let matrix =
+            vec![vec![1, 2, 3, 4], vec![5, 6, 7, 8], vec![9, 10, 11, 12]];
         let solution = vec![1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7];
 
         assert_eq!(Solution::spiral_order(matrix), solution);

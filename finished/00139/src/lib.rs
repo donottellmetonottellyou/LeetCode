@@ -114,10 +114,11 @@ mod tests {
     #[test]
     fn super_aaa() {
         // Takes too long + uses too much memory.
-        let aaa = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\
+        let aaa =
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\
             aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\
             aaaaaaaaaaaaaaaaaaaaaaab"
-            .into();
+                .into();
         assert!(!Solution::word_break(
             aaa,
             vec![

@@ -45,13 +45,17 @@ impl Solution {
     }
 
     #[inline]
-    fn rules_followed(last_val: Option<i32>, current_val: i32, parity: i32) -> bool {
+    fn rules_followed(
+        last_val: Option<i32>,
+        current_val: i32,
+        parity: i32,
+    ) -> bool {
         current_val % 2 != parity
             && match last_val {
                 Some(last_val) => {
                     (parity == 0 && last_val < current_val)
                         || (parity == 1 && last_val > current_val)
-                }
+                },
                 None => true,
             }
     }
@@ -63,7 +67,8 @@ mod tests {
 
     #[test]
     fn is_even_odd_tree_1() {
-        let root = utilities::tree!(1, 10, 4, 3, None, 7, 9, 12, 8, 6, None, None, 2);
+        let root =
+            utilities::tree!(1, 10, 4, 3, None, 7, 9, 12, 8, 6, None, None, 2);
 
         assert!(Solution::is_even_odd_tree(root));
     }

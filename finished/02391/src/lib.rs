@@ -28,13 +28,13 @@ impl From<String> for GarbagePile {
             match piece_of_garbage {
                 b'G' => {
                     pile.0[Garbage::Glass as usize] += 1;
-                }
+                },
                 b'M' => {
                     pile.0[Garbage::Metal as usize] += 1;
-                }
+                },
                 _ => {
                     pile.0[Garbage::Paper as usize] += 1;
-                }
+                },
             }
         }
 
@@ -73,7 +73,8 @@ impl GarbageCollection {
 }
 impl From<Vec<String>> for GarbageCollection {
     fn from(household_trashes: Vec<String>) -> Self {
-        let mut garbage_collection = Self(Vec::with_capacity(household_trashes.len()));
+        let mut garbage_collection =
+            Self(Vec::with_capacity(household_trashes.len()));
 
         for household_trash in household_trashes {
             garbage_collection.0.push(household_trash.into());

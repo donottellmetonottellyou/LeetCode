@@ -14,7 +14,7 @@ impl Solution {
                     // If i >= matrix.len(), it is out of bounds and there is nothing to search.
                     false
                 }
-            }
+            },
         }
     }
 }
@@ -25,13 +25,15 @@ mod tests {
 
     #[test]
     fn first_matrix_tests_true() {
-        let matrix = vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 60]];
+        let matrix =
+            vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 60]];
         assert!(Solution::search_matrix(matrix, 3));
     }
 
     #[test]
     fn second_matrix_tests_false() {
-        let matrix = vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 60]];
+        let matrix =
+            vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 60]];
         assert!(!Solution::search_matrix(matrix, 13));
     }
 

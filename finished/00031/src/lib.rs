@@ -16,21 +16,16 @@ impl Solution {
         }) {
             // Find the next largest number's index (the smallest number that is larger than
             // nums[i]) in nums[(i + 1)..] to swap with nums[i] and set it to j, then do the swap.
-            let j = nums
-                .iter()
-                .copied()
-                .enumerate()
-                .skip(i + 1)
-                .fold(
-                    i + 1,
-                    |j, (k, e)| {
-                        if e > nums[i] && e < nums[j] {
-                            k
-                        } else {
-                            j
-                        }
-                    },
-                );
+            let j = nums.iter().copied().enumerate().skip(i + 1).fold(
+                i + 1,
+                |j, (k, e)| {
+                    if e > nums[i] && e < nums[j] {
+                        k
+                    } else {
+                        j
+                    }
+                },
+            );
             nums.swap(i, j);
 
             // Sort nums[(i + 1)..] so that we get the next lexicographical order.

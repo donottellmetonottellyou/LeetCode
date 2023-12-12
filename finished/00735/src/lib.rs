@@ -19,26 +19,27 @@ impl Solution {
                     break;
                 }
 
-                let last_asteroid = if let Some(last_asteroid) = stack.last().copied() {
-                    if last_asteroid.is_negative() {
+                let last_asteroid =
+                    if let Some(last_asteroid) = stack.last().copied() {
+                        if last_asteroid.is_negative() {
+                            stack.push(asteroid);
+                            break;
+                        } else {
+                            last_asteroid
+                        }
+                    } else {
                         stack.push(asteroid);
                         break;
-                    } else {
-                        last_asteroid
-                    }
-                } else {
-                    stack.push(asteroid);
-                    break;
-                };
+                    };
 
                 match last_asteroid.abs().cmp(&asteroid.abs()) {
                     Less => {
                         stack.pop();
-                    }
+                    },
                     Equal => {
                         stack.pop();
                         break;
-                    }
+                    },
                     Greater => break,
                 }
             }

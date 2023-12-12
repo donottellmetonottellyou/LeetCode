@@ -25,10 +25,7 @@ impl Solution {
         }
 
         // Remove the count from the heap and collect into a Vec.
-        count_priority
-            .into_iter()
-            .map(|(_count, num)| num)
-            .collect()
+        count_priority.into_iter().map(|(_count, num)| num).collect()
     }
 }
 
@@ -41,7 +38,8 @@ mod tests {
     fn finds_top_2_in_111223() {
         let nums = vec![1, 1, 1, 2, 2, 3];
 
-        let top_2: HashSet<i32> = HashSet::from_iter(Solution::top_k_frequent(nums, 2));
+        let top_2: HashSet<i32> =
+            HashSet::from_iter(Solution::top_k_frequent(nums, 2));
 
         assert_eq!(top_2, HashSet::from([1, 2]));
     }
@@ -50,7 +48,8 @@ mod tests {
     fn finds_top_1_in_1() {
         let nums = vec![1];
 
-        let top_1: HashSet<i32> = HashSet::from_iter(Solution::top_k_frequent(nums, 1));
+        let top_1: HashSet<i32> =
+            HashSet::from_iter(Solution::top_k_frequent(nums, 1));
 
         assert_eq!(top_1, HashSet::from([1]));
     }

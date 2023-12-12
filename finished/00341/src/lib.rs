@@ -14,10 +14,7 @@ pub struct NestedIterator {
 
 impl NestedIterator {
     pub fn new(nested_list: Vec<NestedInteger>) -> Self {
-        Self {
-            nested_list,
-            path: vec![],
-        }
+        Self { nested_list, path: vec![] }
     }
 
     /// This function works by alternating between walk_forward() and walk_back(), calling itself to
@@ -29,7 +26,9 @@ impl NestedIterator {
             Err(()) => match self.walk_back() {
                 Ok(integer) => integer,
                 Err(true) => self.next(),
-                Err(false) => panic!("Tried to call next() on a finished iterator!"),
+                Err(false) => {
+                    panic!("Tried to call next() on a finished iterator!")
+                },
             },
         }
     }
@@ -48,7 +47,7 @@ impl NestedIterator {
                         Some(last) => *last += 1,
                         None => return false,
                     }
-                }
+                },
             }
         }
     }
@@ -79,7 +78,7 @@ impl NestedIterator {
                 Ok(integer) => {
                     *self.path.last_mut().ok_or(())? += 1;
                     return Ok(integer);
-                }
+                },
                 Err(true) => self.path.push(0),
 
                 Err(false) => return Err(()),
@@ -100,12 +99,12 @@ impl NestedIterator {
                 Ok(integer) => {
                     *self.path.last_mut().ok_or(false)? += 1;
                     return Ok(integer);
-                }
+                },
                 Err(true) => {
                     self.path.push(0);
                     return Err(true);
-                }
-                Err(false) => {}
+                },
+                Err(false) => {},
             }
         }
     }
@@ -121,9 +120,15 @@ mod tests {
     #[test]
     fn correctly_iterates_nested_structure_1() {
         let nested_list = vec![
-            NestedInteger::List(vec![NestedInteger::Int(1), NestedInteger::Int(1)]),
+            NestedInteger::List(vec![
+                NestedInteger::Int(1),
+                NestedInteger::Int(1),
+            ]),
             NestedInteger::Int(2),
-            NestedInteger::List(vec![NestedInteger::Int(1), NestedInteger::Int(1)]),
+            NestedInteger::List(vec![
+                NestedInteger::Int(1),
+                NestedInteger::Int(1),
+            ]),
         ];
         let mut nested_iterator = NestedIterator::new(nested_list);
 
