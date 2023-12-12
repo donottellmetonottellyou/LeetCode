@@ -25,7 +25,10 @@ impl Solution {
         }
 
         // Remove the count from the heap and collect into a Vec.
-        count_priority.into_iter().map(|(_count, num)| num).collect()
+        count_priority
+            .into_iter()
+            .map(|(_count, num)| num)
+            .collect()
     }
 }
 

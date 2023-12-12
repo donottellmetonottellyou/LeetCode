@@ -13,5 +13,5 @@ reorder_modules                     = true
 short_array_element_width_threshold = 10
 tab_spaces                          = 4
 use_field_init_shorthand            = true
-use_small_heuristics                = "Max"
+use_small_heuristics                = "Default"
 use_try_shorthand                   = true

@@ -14,7 +14,10 @@ pub struct NestedIterator {
 
 impl NestedIterator {
     pub fn new(nested_list: Vec<NestedInteger>) -> Self {
-        Self { nested_list, path: vec![] }
+        Self {
+            nested_list,
+            path: vec![],
+        }
     }
 
     /// This function works by alternating between walk_forward() and walk_back(), calling itself to
