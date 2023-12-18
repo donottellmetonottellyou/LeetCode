@@ -1,6 +1,6 @@
 [package]
-    name    = "remove-duplicates-from-sorted-array-ii"
-    version = "0.1.0"
+    name              = "remove-duplicates-from-sorted-array-ii"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

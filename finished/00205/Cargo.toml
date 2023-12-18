@@ -1,6 +1,6 @@
 [package]
-    name    = "isomorphic-strings"
-    version = "0.1.0"
+    name              = "isomorphic-strings"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

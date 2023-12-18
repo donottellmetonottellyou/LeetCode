@@ -1,6 +1,6 @@
 [package]
-    name    = "kth-symbol-in-grammar"
-    version = "0.1.0"
+    name              = "kth-symbol-in-grammar"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

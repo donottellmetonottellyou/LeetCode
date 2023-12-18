@@ -4,7 +4,10 @@
     resolver = "2"
 
     [workspace.package]
-        authors      = ["Jade Lynn Masker <donottellmetonottellyou@gmail.com>"]
+        version = "0.0.0"
+
+        authors = ["Jade Lynn Masker <donottellmetonottellyou@gmail.com>"]
+
         edition      = "2021"
         publish      = false
         rust-version = "1.58.1"

@@ -1,6 +1,6 @@
 [package]
-    name    = "valid-anagram"
-    version = "0.1.0"
+    name              = "valid-anagram"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

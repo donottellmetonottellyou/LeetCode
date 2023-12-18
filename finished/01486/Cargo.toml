@@ -1,6 +1,6 @@
 [package]
-    name    = "xor-operation-in-an-array"
-    version = "0.1.0"
+    name              = "xor-operation-in-an-array"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

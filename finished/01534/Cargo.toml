@@ -1,6 +1,6 @@
 [package]
-    name    = "count-good-triplets"
-    version = "0.1.0"
+    name              = "count-good-triplets"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

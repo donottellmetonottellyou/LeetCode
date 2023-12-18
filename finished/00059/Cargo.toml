@@ -1,6 +1,6 @@
 [package]
-    name    = "spiral-matrix-ii"
-    version = "0.1.0"
+    name              = "spiral-matrix-ii"
+    version.workspace = true
 
     authors.workspace = true
 

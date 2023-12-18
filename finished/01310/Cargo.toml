@@ -1,6 +1,6 @@
 [package]
-    name    = "xor-queries-of-a-subarray"
-    version = "0.1.0"
+    name              = "xor-queries-of-a-subarray"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

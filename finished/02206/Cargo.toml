@@ -1,6 +1,6 @@
 [package]
-    name    = "divide-array-into-equal-parts"
-    version = "0.1.0"
+    name              = "divide-array-into-equal-parts"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

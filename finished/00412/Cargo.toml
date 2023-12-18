@@ -1,6 +1,6 @@
 [package]
-    name    = "fizz-buzz"
-    version = "0.1.0"
+    name              = "fizz-buzz"
+    version.workspace = true
 
     authors.workspace = true
 

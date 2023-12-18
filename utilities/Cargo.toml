@@ -1,6 +1,6 @@
 [package]
-    name    = "utilities"
-    version = "0.1.0"
+    name              = "utilities"
+    version.workspace = true
 
     description = "Utilities to make testing leetcode problems easier."
 

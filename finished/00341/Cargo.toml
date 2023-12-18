@@ -1,6 +1,6 @@
 [package]
-    name    = "flatten-nested-list-iterator"
-    version = "0.1.0"
+    name              = "flatten-nested-list-iterator"
+    version.workspace = true
 
     authors.workspace = true
 

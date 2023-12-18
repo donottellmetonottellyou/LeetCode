@@ -1,6 +1,6 @@
 [package]
-    name    = "count-good-numbers"
-    version = "0.1.0"
+    name              = "count-good-numbers"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

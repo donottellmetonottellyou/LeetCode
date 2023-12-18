@@ -1,6 +1,6 @@
 [package]
-    name    = "find-minimum-number-of-fibonacci-numbers-whose-sum-is-k"
-    version = "0.1.0"
+    name              = "find-minimum-number-of-fibonacci-numbers-whose-sum-is-k"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

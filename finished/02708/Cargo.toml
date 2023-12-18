@@ -1,6 +1,6 @@
 [package]
-    name    = "maximum-strength-of-a-group"
-    version = "0.1.0"
+    name              = "maximum-strength-of-a-group"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

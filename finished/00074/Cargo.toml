@@ -1,8 +1,9 @@
 [package]
-    name    = "search-a-2d-matrix"
-    version = "0.1.0"
+    name              = "search-a-2d-matrix"
+    version.workspace = true
 
-    authors.workspace      = true
+    authors.workspace = true
+
     edition.workspace      = true
     publish.workspace      = true
     rust-version.workspace = true

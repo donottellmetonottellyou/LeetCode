@@ -1,6 +1,6 @@
 [package]
-    name    = "number-of-valid-clock-times"
-    version = "0.1.0"
+    name              = "number-of-valid-clock-times"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

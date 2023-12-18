@@ -1,6 +1,6 @@
 [package]
-    name    = "minimum-amount-of-time-to-collect-garbage"
-    version = "0.1.0"
+    name              = "minimum-amount-of-time-to-collect-garbage"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

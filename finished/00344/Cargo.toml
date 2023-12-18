@@ -1,6 +1,6 @@
 [package]
-    name    = "reverse-string"
-    version = "0.1.0"
+    name              = "reverse-string"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

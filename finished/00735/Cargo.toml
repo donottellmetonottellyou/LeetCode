@@ -1,6 +1,6 @@
 [package]
-    name    = "asteroid-collision"
-    version = "0.1.0"
+    name              = "asteroid-collision"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

@@ -1,6 +1,6 @@
 [package]
-    name    = "kth-smallest-element-in-a-sorted-matrix"
-    version = "0.1.0"
+    name              = "kth-smallest-element-in-a-sorted-matrix"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true

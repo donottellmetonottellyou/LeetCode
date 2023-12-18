@@ -1,6 +1,6 @@
 [package]
-    name    = "even-odd-tree"
-    version = "0.1.0"
+    name              = "even-odd-tree"
+    version.workspace = true
 
     authors.workspace      = true
     edition.workspace      = true
