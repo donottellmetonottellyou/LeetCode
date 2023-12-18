@@ -1,0 +1,11 @@
+[package]
+    name              = "maximum-product-difference-between-two-pairs"
+    version.workspace = true
+
+    authors.workspace = true
+
+    edition.workspace      = true
+    publish.workspace      = true
+    rust-version.workspace = true
+
+[dependencies]
